@@ -9,7 +9,7 @@ public class Ex14681 {
 		Scanner sc = new Scanner(System.in);
 
 		int x = sc.nextInt();
-		int y = sc.nextInt(); 
+		int y = sc.nextInt();    
 
 		if (x > 0) {
 			if (y > 0) {
