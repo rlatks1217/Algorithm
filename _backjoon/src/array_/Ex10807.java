@@ -9,7 +9,7 @@ public class Ex10807 {
 
 		Scanner sc = new Scanner(System.in);
 
-		int N = sc.nextInt();
+		int N = sc.nextInt(); 
 		sc.nextLine();
 		String numbers = sc.nextLine();
 		int v = sc.nextInt();
