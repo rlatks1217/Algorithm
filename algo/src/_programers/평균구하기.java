@@ -1,4 +1,4 @@
-package LV1;
+package _programers;
 
 public class 평균구하기 {
 

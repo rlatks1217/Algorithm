@@ -1,4 +1,4 @@
-package LV1;
+package _programers;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
