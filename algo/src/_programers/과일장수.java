@@ -32,8 +32,10 @@ public class 과일장수 {
 //			answer += appleScore[startIndex-(m-1)]*m;
 //			startIndex = startIndex-m;
 //		}
-		
+// 10 - 7 = 3 => 여기서 3이라는 수는 끝에서 '8'번째 수임		
 		System.out.println(answer);
+		
+
 	}
 
 }
