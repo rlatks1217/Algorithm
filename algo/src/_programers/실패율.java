@@ -71,3 +71,5 @@ class Stage {
 		return failPercent;
 	}
 }
+
+//오답원인 : 실패율이 같은 경우는 고려하지 않았음!
