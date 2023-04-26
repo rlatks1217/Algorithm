@@ -72,4 +72,6 @@ class Stage {
 	}
 }
 
-//오답원인 : 실패율이 같은 경우는 고려하지 않았음!
+//오답원인
+//실패율이 같은 경우는 고려하지 않았음!
+//reachCount 즉, 분모가 0이 될 경우 0으로는 나눌 수 없어서 java.lang.ArithmeticException가 발생함
