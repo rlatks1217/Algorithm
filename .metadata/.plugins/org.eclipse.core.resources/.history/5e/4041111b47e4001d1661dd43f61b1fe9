@@ -1,0 +1,77 @@
+package _programers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class 실패율 {
+
+	public static void main(String[] args) {
+		
+		System.out.println((double)0/7);
+		int N = 5;
+		int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};
+		
+		List<Stage> stageList = new ArrayList<>();
+		
+		for (int i = 1; i <= N; i++) {
+			int reachCount = 0;
+			int notClear = 0;
+			for (int j = 0; j < stages.length; j++) {
+				if (i <= stages[j]) {
+					reachCount++;
+					if(i == stages[j]) {
+						notClear++;
+					}
+				}
+			}
+			double failPercent = reachCount == 0 ? 0 : (double)notClear/reachCount;
+			stageList.add(new Stage(i, failPercent));
+		}
+		
+
+//기본 개념
+//	Collections.sort(list); => 이런 식으로 쓴다면 기본적으로 해당 list를 오름차순으로 정렬한다. 단, list안에 들어있는 dataType이 primitive Type이거나 String이어야 함(generic이 primitive Type이거나 String이어야 하는 거지)
+//	Collections.sort(list, comparator); => 이런 식으로 쓴다면 comparator 객체를 기준으로 정렬을 하게 된다. 즉, comparator는 정렬을 어떻게 할 거냐는 것에 대한 내용을 담은 객체인 것 
+		Collections.sort(stageList, Comparator.comparingDouble(Stage::getFailPercent).reversed().thenComparingInt(Stage::getNumber));
+//위의 코드에 대한 설명
+//	Comparator.comparingDouble(Stage::getFailPercent) 
+//	=> 기준을 가진 객체를 인자로 넣어줄 텐데 어떤 기준을 가진 객체냐 하면 Stage객체의 getFailPercent()를 이용하여 값을 뽑아 오름차순 정렬을 하라는 기준을 갖는다.
+//	.reversed().thenComparingInt(Stage::getNumber) 
+//	=> 내림차순으로 정렬해야 하기 때문에 comparingDouble(Stage::getFailPercent)로 오름차순 정렬한 결과를 뒤집기 위해 .reversed()를 사용
+//	=> 해당 조건으로 비교가 안 되는 경우(같은 경우) 추가정렬 기준을 주기 위해  .thenComparingInt(Stage::getNumber)를 사용함
+
+		
+		int[] answer = new int[N];
+		
+		for (int i = 0; i < N; i++) {
+			answer[i] = stageList.get(i).getNumber();
+		}
+		
+		System.out.println(Arrays.toString(answer));
+	}
+
+}
+
+class Stage {
+	private int number;
+	private double failPercent;
+	
+	public Stage(int number, double failPercent) {
+		this.number = number;
+		this.failPercent = failPercent;
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+	
+	public double getFailPercent() {
+		return failPercent;
+	}
+}
+
+//오답원인 : 실패율이 같은 경우는 고려하지 않았음!
+//

@@ -1,0 +1,49 @@
+package _programers;
+
+public class 명예의전당 {
+
+	public static void main(String[] args) {
+		
+		int k = 3;
+		int[] score = {10,100,20,150,1,100,200};
+		
+		//명예의 전당
+		int[] mj = new int[k];
+		//그날 최하위 친구 점수
+		int[] result = new int[7];
+		int worstIndex = 0;
+		
+		for (int i = 0; i < 7; i++) {
+			if (i < k) {
+				mj[i] = score[i];
+				if(i == 0) {
+					result[0] = score[i];
+				} else { 
+					if (result[i-1] > score[i]) {
+						result[i] = score[i];
+						worstIndex = i;
+					}else {
+						result[i] = result[i-1];
+					}
+				}
+			}else {
+				if (result[i-1] < score[i]) {
+					mj[worstIndex] = score[i];
+					if (result[i-2] > score[i]) {
+						result[i] = score[i];
+					}else {
+						result[i] = result[i-2];						
+					}
+				}
+			}
+			System.out.println(i+1 + "쨋날");
+			System.out.println(result[i]);
+		}//for
+		
+//		for (int i : result) {
+//			System.out.println(i);
+//		}
+		
+	}
+
+}

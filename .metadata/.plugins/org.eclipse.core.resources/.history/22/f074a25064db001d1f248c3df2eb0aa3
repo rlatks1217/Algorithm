@@ -1,9 +1,0 @@
-package _programers;
-
-public class 소수만들기 {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
