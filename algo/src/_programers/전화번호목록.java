@@ -39,3 +39,4 @@ public class 전화번호목록 {
 //2. Map 자료구조를 활용하여 담고 반복문 돌리기(검색 속도 향상)
 // Arrays.sort(phone_book, Comparator.comparing(String::length)); : 배열 정렬
 // 기본 for문보다 for each문이 더 빠름
+// treeSet도 유용한 자료구조임
