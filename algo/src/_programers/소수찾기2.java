@@ -7,9 +7,6 @@ public class 소수찾기2 {
 
     public static void main(String[] args) {
     	System.out.println(solution("011"));
-    	
-    	String a  = "";
-
     }
     
     public static int solution(String numbers) {
@@ -19,16 +16,15 @@ public class 소수찾기2 {
     	permutation("", numbers, set);
     	
     	for (int num : set) { //Integer 객체들이 저장되어 있는 자료구조라도 for문 안에서는 자동으로 int형으로 변환되어 나옴
+    		System.out.println(num);
 			if (isPrime(num)) {
-				System.out.println(num);
 				answer++;
 			}
 		}
-    	
     	return answer;
     }
 
-    //순열 구하기
+    //순열 구하기(n개 중에 1개 선택하기 ~ n개 선택하기까지 모든 경우의 수)
 	private static void permutation(String choose, String numbers, Set<Integer> set) { 
         int n = numbers.length();
         if (!choose.equals("")) {
@@ -37,6 +33,9 @@ public class 소수찾기2 {
         
         for (int i = 0; i < n; i++) {
             permutation(choose+numbers.charAt(i), numbers.substring(0, i)+numbers.substring(i+1, n), set);
+            //numbers.substring(0, i)+numbers.substring(i+1, n) 라고 쓰면 i번째 글자만 빼고 문자열을 만들 수 있음
+            //choose가 말 그대로 이미 선택한 숫자를 의미하고 loop는 셀 수 있는 경우의 수를 의미함 
+            //loop를 돌면서 숫자가 선택될 때마다 choose라는 변수에 해당 숫자를 붙여주며 경우의 수를 세는 식
         }
 	}
 	
@@ -64,3 +63,6 @@ public class 소수찾기2 {
 //for (int i = 0; i < 0; i++) {
 //	a.charAt(i);			
 //} 이처럼 (시작 인덱스 >= 제한 인덱스)라면 for문은 실행되지 않음(애초에 for문이 종료되는 원리와도 같음)
+
+//Math.sqrt(num);
+//제곱근 구하는 메소드
