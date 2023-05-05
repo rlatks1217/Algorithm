@@ -1,0 +1,37 @@
+package _programers;
+
+public class 덧칠하기 {
+	
+	public static void main(String[] args) {
+		
+		int section[] = {2,3,6};
+		int n = 8;
+		int m = 4;
+		
+		int startIndex = section[0];
+		int idx = 0;
+		boolean move = true;
+		
+		int answer = 0;
+		while (startIndex <= n-(m-1)) {
+			if (section[idx] <= startIndex+(m-1)) {
+				if (move) {
+					answer++;
+					move= false;
+				}
+				if (section.length > idx) {				
+					idx++;
+				}
+			}else {
+				startIndex++;
+				move = true;
+			}
+		}
+		
+		System.out.println(answer);
+		
+		
+	}
+		
+
+}

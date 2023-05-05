@@ -1,0 +1,27 @@
+package _programers;
+
+public class 덧칠하기 {
+	
+	public static void main(String[] args) {
+		
+		int section[] = {2,3,6};
+		int n = 8;
+		int m = 4;
+		
+		int startIndex = 1;
+		int idx = 0;
+		
+		int answer = 0;
+		while (startIndex < n-3) {
+			if (section[idx] < startIndex+3) {
+				idx++;
+			}
+		}
+		
+		if (m > n) {
+			answer = 0;
+		}
+	}
+		
+
+}
