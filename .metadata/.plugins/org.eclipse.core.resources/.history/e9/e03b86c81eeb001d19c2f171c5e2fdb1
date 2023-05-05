@@ -1,0 +1,24 @@
+package _programers;
+
+import java.util.TreeSet;
+
+public class 소수찾기2 {
+
+    public static void main(String[] args) {
+    	
+    	TreeSet<String> set = new TreeSet();
+    	
+    	String[] a = {"나","가","마", "라", "다"};
+    	
+    	for (String string : a) {
+			set.add(string);
+		}
+    	
+    	for (String string : a) {
+			System.out.println(string);
+		}
+    }
+    
+    
+
+}

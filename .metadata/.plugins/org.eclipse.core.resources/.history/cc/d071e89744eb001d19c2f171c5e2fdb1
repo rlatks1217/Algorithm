@@ -1,0 +1,57 @@
+package _programers;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class 소수찾기2 {
+
+    public static void main(String[] args) {
+//    	System.out.println(solution("011"));
+    	
+    	String a  = "1231";
+    	a.substring(4, a.length());
+    }
+    
+    public static int solution(String numbers) {
+    	int answer = 0;
+    	
+    	Set<Integer> set = new HashSet<>();
+    	permutation("", numbers, set);
+    	
+    	for (int num : set) { //Integer 객체들이 저장되어 있는 자료구조라도 for문 안에서는 자동으로 int형으로 변환되어 나옴
+			if (isPrime(num)) {
+				answer++;
+			}
+		}
+    	
+    	return answer;
+    }
+
+    //순열 구하기
+	private static void permutation(String choose, String numbers, Set<Integer> set) {// "" , "011" , set
+        int n = numbers.length();
+        if (!choose.equals("")) {
+            set.add(Integer.valueOf(choose)); //문자열을 Integer로 바꾸는 메소드
+        }
+        
+        for (int i = 0; i < n; i++) {
+//            permutation(choose+numbers.charAt(i), numbers.substring(0, i)+numbers.substring(i+1, n), set);
+        }
+        
+	}
+	
+	//소수인지 판별
+	private static boolean isPrime(int num) {
+		if(num == 0 || num == 1) {
+			return false;
+		} else {
+			for (int i = 2; i <= Math.sqrt(num); i++) {
+				if (num%i == 0) {
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+}
