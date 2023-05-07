@@ -15,8 +15,7 @@ public class 소수찾기2 {
     	Set<Integer> set = new HashSet<>();
     	permutation("", numbers, set);
     	
-    	for (int num : set) { //Integer 객체들이 저장되어 있는 자료구조라도 for문 안에서는 자동으로 int형으로 변환되어 나옴
-    		System.out.println(num);
+    	for (int num : set) { //Integer 객체들이 저장되어 있는 자료구조라도 for문 안에서는 int형으로 변환되어 나오게 할 수 있음
 			if (isPrime(num)) {
 				answer++;
 			}
@@ -34,7 +33,7 @@ public class 소수찾기2 {
         for (int i = 0; i < n; i++) {
             permutation(choose+numbers.charAt(i), numbers.substring(0, i)+numbers.substring(i+1, n), set);
             //numbers.substring(0, i)+numbers.substring(i+1, n) 라고 쓰면 i번째 글자만 빼고 문자열을 만들 수 있음
-            //choose가 말 그대로 이미 선택한 숫자를 의미하고 loop는 셀 수 있는 경우의 수를 의미함 
+            //choose가 말 그대로 이미 선택한 숫자를 의미하고 loop는 해당 숫자를 선택하면서 셀 수 있는 경우의 수를 의미함 
             //loop를 돌면서 숫자가 선택될 때마다 choose라는 변수에 해당 숫자를 붙여주며 경우의 수를 세는 식
         }
 	}
