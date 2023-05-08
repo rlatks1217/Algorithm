@@ -7,6 +7,7 @@ public class DFS {
 	public static void main(String[] args) {
 		
 		boolean[] visited = new boolean[9];
+		//list를 통해서 그래프 자료구조를 표현
 		ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 		//graph라는 list 안에 들어가는 list가 각 노드가 방문해야 할 노드들의 list임
 		
@@ -42,9 +43,10 @@ public class DFS {
 		graph.get(8).add(1);
 		graph.get(8).add(7);
 		
-		dfs(1, visited, graph);
+		dfs(1, visited, graph); //1부터 방문 시작
 	}
 	
+	//이 재귀함수를 통해서 자바 내부 스택을 이용한 DFS 구현
 	public static void dfs(int x, boolean[] visited, ArrayList<ArrayList<Integer>> graph) {
 		
 		visited[x] = true; //현재 노드 방문처리
