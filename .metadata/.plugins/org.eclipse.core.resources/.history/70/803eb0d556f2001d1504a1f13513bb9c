@@ -1,0 +1,22 @@
+package 알고리즘개념;
+
+import java.util.Arrays;
+
+public class 그리디_4 {
+
+	public static void main(String[] args) {
+		
+		int N = 5;
+		String mohomga = "2 3 1 2 2";
+		String[] num = mohomga.split(" ");
+		Arrays.sort(num);
+		int start = 0;
+		int result = 0;
+		
+		for (int i = 0; i < N; i++) {
+			
+		}
+		
+	}
+
+}

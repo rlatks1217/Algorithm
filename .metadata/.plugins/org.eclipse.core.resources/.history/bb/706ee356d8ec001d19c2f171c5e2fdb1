@@ -1,0 +1,43 @@
+package _programers;
+
+import java.util.HashSet;
+
+public class testd {
+
+	public static void main(String[] args) {
+		solution("011");
+	}
+
+	private static int solution(String string) {
+		int answer = 0;
+		HashSet<Integer> set = new HashSet<>();
+		permutation("", string, set);
+		for (int i : set) {
+			if (isPrime(i)) {
+				answer++;
+			}
+		}
+		
+		return answer;
+	}
+	
+	private static void permutation(String string, String string2, HashSet<Integer> set) {
+		
+	}
+
+	private static boolean isPrime(int i) {
+		
+		if (i < 2) {
+			return false;
+		} else {
+			for (int j = 2; j*j <= i; j++) {
+				if (i*j == 0) {
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+
+}

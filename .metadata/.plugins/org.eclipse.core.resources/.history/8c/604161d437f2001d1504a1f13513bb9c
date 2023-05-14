@@ -1,0 +1,18 @@
+package _programers.알고리즘개념;
+
+public class 그리디 {
+
+	public static void main(String[] args) {
+		
+		int N = 1260;
+		int[] coin = {500, 100, 50, 10};
+		int sum = 0;
+		for (int co : coin) {
+			sum += N/co;
+			N = N%co;
+		}
+		
+		System.out.println(sum);
+	}
+
+}

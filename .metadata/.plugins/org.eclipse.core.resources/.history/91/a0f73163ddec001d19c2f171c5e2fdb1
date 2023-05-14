@@ -1,0 +1,18 @@
+import java.util.HashMap;
+
+public class 의상 {
+
+	public static void main(String[] args) {
+		String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
+		solution(clothes);
+	}
+
+	private static void solution(String[][] clothes) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		for (String[] clo : clothes) {
+			map.put(clo[1], clo[0]);
+		}
+	}
+
+}

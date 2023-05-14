@@ -1,0 +1,30 @@
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class 의상 {
+
+	public static void main(String[] args) {
+		String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
+//		solution(clothes);
+		
+		String a = "dasda,fsfsfa";
+		String[] b = a.split(",");
+		
+		System.out.println(Arrays.toString(b));
+		
+	}
+
+	private static int solution(String[][] clothes) {
+		int answer = 0;
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		combination(map);
+		
+		return answer;
+	}
+
+	private static void combination(HashMap<String, String> map) {
+		
+	}
+
+}

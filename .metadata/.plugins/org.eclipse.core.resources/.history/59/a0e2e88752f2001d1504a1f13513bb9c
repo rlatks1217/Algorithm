@@ -1,0 +1,16 @@
+package 알고리즘개념;
+
+public class 그리디_3 {
+
+	public static void main(String[] args) {
+
+		String s = "02984";
+
+		int result = 0;
+
+		for (int i = 1; i < s.length(); i++) {
+			int num = s.charAt(i) - '0';
+			
+		}
+	}
+}
