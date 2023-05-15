@@ -1,0 +1,40 @@
+package _programers;
+
+
+public class 숫자짝꿍 {
+
+	public static void main(String[] args) {
+		
+		System.out.println(solution("100", "203045"));
+	}
+
+	private static String solution(String x, String y) {
+	
+		String answer = "";
+		int zeroCount = 0;
+		for (int i = 0; i < x.length(); i++) {
+			for (int j = 0; j < y.length(); j++) {
+				if (x.charAt(i) == y.charAt(j)) {
+					if (y.charAt(j) == '0') {
+						zeroCount++;
+					}
+					y = y.substring(0, j) + y.substring(j+1, y.length());					
+					answer += x.charAt(i);
+					
+					break;
+				}
+			}
+		}
+		
+		if (answer.equals("")) {
+			return "-1";
+		}
+		
+		if (answer.length() == zeroCount) {
+			return "0";
+		}
+			
+		return answer;
+	}
+
+}

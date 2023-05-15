@@ -1,0 +1,44 @@
+package _programers;
+
+import java.util.Arrays;
+import java.util.TreeSet;
+
+public class 숫자짝꿍 {
+
+	public static void main(String[] args) {
+		
+		System.out.println(solution("5525", "1255"));
+	}
+
+	private static String solution(String x, String y) {
+	
+		String answer = "";
+		int zeroCount = 0;
+		
+		TreeSet<Character> set = new TreeSet<>();
+		
+		for (char c : x.toCharArray()) {
+			set.add(c);
+		}
+		
+		System.out.println(set);
+		if (answer.equals("")) {
+			return "-1";
+		}
+		
+		if (answer.length() == zeroCount) {
+			return "0";
+		}
+		
+		char[] arr = answer.toCharArray();
+ 		Arrays.sort(arr);
+ 		
+		answer = "";
+		for (int i = arr.length-1; i >= 0; i--) {
+			answer += arr[i];
+		}
+		
+		return answer;
+	}
+
+}

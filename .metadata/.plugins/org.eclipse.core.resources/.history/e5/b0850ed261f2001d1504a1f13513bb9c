@@ -1,0 +1,18 @@
+package _programers;
+
+
+public class 숫자짝꿍 {
+
+	public static void main(String[] args) {
+		
+		System.out.println(solution("12321", "42531"));
+	}
+
+	private static String solution(String x, String y) {
+	
+		System.out.println(x.indexOf('2'));
+		
+		return null;
+	}
+
+}
