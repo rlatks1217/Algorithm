@@ -1,9 +1,0 @@
-package _programers;
-
-public class testd {
-
-	public static void main(String[] args) {
-		solution("011");
-	}
-
-}
