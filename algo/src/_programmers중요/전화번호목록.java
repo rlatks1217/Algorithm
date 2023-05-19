@@ -1,4 +1,4 @@
-package _programmers;
+package _programmers중요;
 
 import java.util.HashMap;
 
@@ -21,6 +21,7 @@ public class 전화번호목록 {
         
         for (int i = 0; i < phone_book.length; i++) {
 			for (int j = 1; j < phone_book[i].length(); j++) {
+				//각 번호를 한 글자씩 추가해가면서 마지막 index 전까지 자르고 해당 자른 문자열을 key로 가지고 있는지 확인
 				String a = phone_book[i].substring(0 ,j);
 				if (map.containsKey(a)) {
 					return false;

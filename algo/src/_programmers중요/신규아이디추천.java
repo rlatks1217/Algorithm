@@ -1,4 +1,4 @@
-package _programmers;
+package _programmers중요;
 
 public class 신규아이디추천 {
 	
