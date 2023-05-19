@@ -1,4 +1,4 @@
-package _programmers;
+package _programmers중요;
 
 import java.util.HashMap;
 
@@ -74,7 +74,6 @@ public class 성격유형검사하기 {
 			}
 		}
 		
-		System.out.println(map);
 		return answer;
 	}
 
