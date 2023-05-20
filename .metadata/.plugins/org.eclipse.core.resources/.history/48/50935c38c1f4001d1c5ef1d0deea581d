@@ -1,0 +1,14 @@
+package _programers;
+
+public class 멀리뛰기 {
+
+	public static void main(String[] args) {
+		System.out.println(solution(4));
+	}
+
+	private static char[] solution(int n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,98 @@
+package _programers;
+
+import java.util.Arrays;
+
+public class 공원산책 {
+
+	public static void main(String[] args) {
+		String[] park = {
+				"SOO", 
+				"OXX", 
+				"OOO"};
+		String[] routes = {"E 2", "S 2", "W 1"};
+ 		
+		System.out.println(solution(park, routes));
+	}
+
+	private static int[] solution(String[] park, String[] routes) {
+		
+		int locationX = 0;
+		int locationY = 0;
+		for (int i = 0; i < routes.length; i++) {
+			char direction = routes[i].charAt(0);
+			int distance = routes[i].charAt(2) - '0';
+
+			int x = 0;
+			int y = 0;
+			boolean nonPass = true; 
+			switch (direction) {
+			case 'E':
+				x = locationX + distance;
+				for (int j = locationX; j <= x; j++) {
+					if (park[locationY].charAt(j) == 'X') {
+						nonPass = false;
+						break;
+					}
+				}
+				if (x >= park[0].length() || nonPass) {
+					continue;
+				} else {
+					locationX = x;
+				}
+				break;
+			case 'W':
+				x = locationX - distance;
+				for (int j = locationX; j >= x; j--) {
+					System.out.println(j);
+					if (park[locationY].charAt(j) == 'X') {
+						nonPass = true;
+						break;
+					}
+				}
+				if (x < 0 || nonPass) {
+					continue;
+				} else {
+					locationX = x;
+				}
+				break;
+			case 'S':
+				y = locationY + distance;
+				for (int j = locationY; j <= y; j++) {
+					if (park[j].charAt(locationX) == 'X') {
+						nonPass = true;
+						break;
+					}
+				}
+				if (y < 0 || nonPass) {
+					continue;
+				} else {
+					locationY = y;
+				}
+				break;
+			case 'N':
+				y = locationY + distance;
+				for (int j = locationY; j >= 0; j--) {
+					if (park[j].charAt(locationX) == 'X') {
+						nonPass = true;
+						break;
+					}
+				}
+				if (y < 0 || nonPass) {
+					continue;
+				} else {
+					locationY = y;
+				}
+				break;
+			}
+			
+			System.out.println(locationX + ", " + locationY);
+
+		}
+		
+		int[] answer = {locationY, locationX};
+		
+		System.out.println(Arrays.toString(answer));
+		return answer;
+	}
+
+}

@@ -1,0 +1,27 @@
+package _programers;
+
+import java.time.LocalDate;
+
+public class 개인정보수집유효기간 {
+
+	public static void main(String[] args) {
+		String today = "2022.05.19";
+		String[] term = {"A 6", "B 12", "C 3"};
+		String[] privacies = {"2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"};
+		
+		today = today.replace(".", "-")
+		LocalDate date =  LocalDate.parse(today);
+		System.out.println(date);
+//		System.out.println(date.plusMonths(5));
+//		System.out.println(solution(today, term, privacies));
+	}
+
+	private static int[] solution(String today, String[] term, String[] privacies) {
+		int[] answer = {};
+		
+		
+		
+		return null;
+	}
+
+}
