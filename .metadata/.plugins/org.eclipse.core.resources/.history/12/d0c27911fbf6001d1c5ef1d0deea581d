@@ -1,0 +1,16 @@
+
+public class 바탕화면정리 {
+
+	public static void main(String[] args) {
+		
+		String[] wallpaper = {".#...", "..#..", "...#."};
+		System.out.println(solution(wallpaper));
+	}
+
+	private static int[] solution(String[] wallpaper) {
+		int[] answer = {}; 
+	
+		return null;
+	}
+
+}

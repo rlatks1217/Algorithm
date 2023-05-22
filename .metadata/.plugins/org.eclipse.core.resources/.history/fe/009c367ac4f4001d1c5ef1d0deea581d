@@ -1,0 +1,32 @@
+package _programers;
+
+public class 멀리뛰기 {
+
+	public static int answer = 0;
+	public static void main(String[] args) {
+		System.out.println(solution(4));
+	}
+
+	private static int solution(int n) {
+		
+		jump(n, 0);
+		return answer;
+	}
+
+	private static void jump(int n, int distance) {
+		
+		if (n == 0) {
+			answer++;
+			return;
+		}else if (n == -1) {
+			return;
+		}
+		
+		n -= distance;
+		for (int i = 1; i <= 2; i++) {
+			jump(n, i);
+		}
+		
+	}
+
+}

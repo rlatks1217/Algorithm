@@ -1,0 +1,14 @@
+package _programers;
+
+public class 괄호회전하기 {
+
+	public static void main(String[] args) {
+		System.out.println(solution("[](){}"));
+	}
+
+	private static int solution(String s) {
+		
+		return 0;
+	}
+
+}

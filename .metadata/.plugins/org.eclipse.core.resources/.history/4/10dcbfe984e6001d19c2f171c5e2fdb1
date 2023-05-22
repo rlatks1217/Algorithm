@@ -1,9 +1,0 @@
-package _programers;
-
-public class 덧칠하기 {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}

@@ -1,0 +1,10 @@
+
+public class 바탕화면정리 {
+
+	public static void main(String[] args) {
+		
+		String[] wallpaper = {".#...", "..#..", "...#."};
+		System.out.println(solution());
+	}
+
+}

@@ -1,0 +1,10 @@
+package _programers;
+
+public class 멀리뛰기 {
+
+	public static void main(String[] args) {
+//		System.out.println(solution());
+		System.out.println(5%1234567);
+	}
+
+}

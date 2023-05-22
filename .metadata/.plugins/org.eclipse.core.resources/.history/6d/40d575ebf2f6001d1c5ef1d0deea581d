@@ -1,0 +1,10 @@
+package _programers;
+
+public class 개인정보수집유효기간 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
