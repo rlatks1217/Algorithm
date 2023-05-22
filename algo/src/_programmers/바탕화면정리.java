@@ -1,3 +1,4 @@
+package _programmers;
 
 public class 바탕화면정리 {
 

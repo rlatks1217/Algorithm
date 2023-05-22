@@ -1,4 +1,4 @@
-package _programers;
+package _programmers;
 
 public class 멀리뛰기 {
 

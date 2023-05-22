@@ -1,4 +1,4 @@
-package _programers;
+package _programmers;
 
 public class 괄호회전하기 {
 
