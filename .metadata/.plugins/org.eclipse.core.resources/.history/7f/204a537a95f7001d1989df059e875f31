@@ -1,0 +1,61 @@
+package _programers;
+
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class 신고결과받기 {
+
+	public static void main(String[] args) {
+		String[] id_list = {"muzi", "frodo", "apeach", "neo"};
+		String[] report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
+		int k = 2;
+ 		System.out.println(solution(id_list, report, k));
+	}
+
+	private static int[] solution(String[] id_list, String[] report, int k) {
+		int[] answer = new int[id_list.length];
+		
+		HashMap<String, Integer> map = new HashMap<>();
+		HashMap<String, Integer> mailMap = new HashMap<>();
+		
+		//신고횟수 세기 위한 map
+		//메일 횟수를 세기 위한 map
+		for (String id : id_list) {
+			map.put(id, 0);
+		}
+		
+		for (int i = 0; i < report.length; i++) {
+			String user = report[i].split(" ")[0];
+			String reporter = report[i].split(" ")[1];
+			boolean noReport = true;
+			
+			for (int j = 0; j < i; j++) {
+				if(report[j].contains(user) && report[j].contains(reporter)) {
+					noReport = false;
+					break;
+				}				
+			}
+			
+			if (noReport) {
+				map.put(reporter ,map.get(reporter) + 1);
+				if(map.get(reporter) == k) {
+					for (int j = 0; j < i; j++) {
+						String checkUser = report[i].split(" ")[1];
+						if(checkUser.equals(reporter)) {
+							answer[j]++;
+						}
+					}
+					map.put(reporter ,0);
+				}
+			}
+		}
+		
+		System.out.println(Arrays.toString(answer));
+		
+		
+		
+		
+		return answer;
+	}
+
+}

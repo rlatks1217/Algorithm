@@ -1,0 +1,15 @@
+package _programers;
+
+public class 이진변환반복하기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "110010101001";
+		System.out.println(solution(s));
+	}
+
+	private static char[] solution(String s) {
+		return null;
+	}
+
+}

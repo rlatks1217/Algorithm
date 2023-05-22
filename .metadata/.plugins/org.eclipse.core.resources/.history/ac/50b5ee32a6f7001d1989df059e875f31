@@ -1,0 +1,32 @@
+package _programers;
+
+public class 이진변환반복하기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = Integer.toString(4, 2);
+		System.out.println(a);
+		
+//		String s = "110010101001";
+//		System.out.println(solution(s));
+	}
+
+	private static char[] solution(String s) {
+		int count = 0;
+		while (true) {
+			for (int i = 0; i < s.length(); i++) {
+				if (s.charAt(i) == '0') {
+					count++;
+				}
+			}
+			s = s.replace("0", "");
+			
+			int number = s.length();
+			s = Integer.toString(number, 2);
+			
+		}
+		
+		return null;
+	}
+
+}

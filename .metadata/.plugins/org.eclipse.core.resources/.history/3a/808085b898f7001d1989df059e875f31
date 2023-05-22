@@ -1,0 +1,19 @@
+package _programers;
+
+public class JadenCase {
+
+	public static void main(String[] args) {
+		String s = "3people unFollowed me";
+		System.out.println(' ');
+		System.out.println(solution(s));
+	}
+
+	private static String solution(String s) {
+		String answer = "";
+		
+		
+		
+		return answer;
+	}
+
+}
