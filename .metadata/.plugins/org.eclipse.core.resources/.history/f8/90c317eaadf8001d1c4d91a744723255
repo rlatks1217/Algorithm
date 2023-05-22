@@ -1,0 +1,35 @@
+package _programmers;
+
+public class 점프와순간이동 {
+
+	public static void main(String[] args) {
+		System.out.println(solution(6));
+	}
+
+	private static int solution(int n) {
+		int answer = 0;
+		
+		int distance = 0;
+		while(distance != n) {
+			if (distance == 0) {
+				answer++;
+				distance = 1;
+				if (n == distance) {
+					break;
+				}
+			}
+			
+			int gap = n - distance;
+			
+			if(gap >= distance) {
+				distance += distance;
+			}else {
+				System.out.println(gap);
+				distance += gap;
+				answer += gap;
+			}
+		}
+		return answer;
+	}
+
+}

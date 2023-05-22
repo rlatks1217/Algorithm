@@ -1,0 +1,42 @@
+package _programmers;
+
+public class 예상대진표 {
+
+	public static void main(String[] args) {
+		int n = 8;
+		int a = 4;
+		int b = 7;
+		System.out.println(solution(n, a, b));
+	}
+
+	private static int solution(int n, int a, int b) {
+		int answer = 1; //1라운드부터 시작
+		while(true) {
+			int gap = a - b; //1이 될 때까지 할 예정이니까 일단 뺄셈하기
+			if (gap < 0 && b%2 == 0) {//gap이 음수가 나왔다는 것은 b가 더 크단 얘기 => b가 짝수여야 함(why? 그래야 2,4,6,8처럼 오른쪽에 위치하면서 a와 만날 수 있음)
+				if (gap == -1) {
+					break;
+				}
+			}else if (a%2 == 0){
+				if(gap == 1) {
+					break;
+				}
+			}
+			
+			if(a%2 != 0) {
+				a+=1;
+			}
+			if(b%2 != 0) {
+				b+=1;
+			}
+			
+			a /= 2;
+			b /= 2;
+			
+			answer++;
+		}
+		
+		return answer;
+	}
+
+}
