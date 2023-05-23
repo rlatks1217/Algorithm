@@ -1,0 +1,26 @@
+package _programmers;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class 캐시 {
+
+	public static void main(String[] args) {
+
+	}
+	
+    public int solution(int cacheSize, String[] cities) {
+        int answer = 0;
+        
+        Queue<String> queue = new LinkedList<String>();
+        
+        for (String city : cities) {
+			queue.offer(city);
+		}
+        
+        
+        
+        return answer;
+    }
+
+}

@@ -1,0 +1,43 @@
+package _programmers;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class 캐시 {
+
+	public static void main(String[] args) {
+		String[] s = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"}; 
+		solution(0 ,s);
+	}
+	
+    public static int solution(int cacheSize, String[] cities) {
+        int answer = 0;
+        
+        Queue<String> queue = new LinkedList<String>();
+        
+        for (int i = 0; i < cacheSize; i++) {
+			queue.offer(cities[i]);
+			answer+=5;
+		}
+        
+        System.out.println(queue);
+        
+//        for (int i = cacheSize; i < cities.length; i++) {
+//        	String a = queue.poll();
+//			if (a.equals(cities[i])) {
+//				queue.remove(cities[i]);
+//				queue.offer(cities[i]);
+//				answer++;
+//			}else {
+//				queue.offer(cities[i]);
+//				answer+=5;
+//			}
+//		}
+        
+        System.out.println(answer);
+        
+        
+        return answer;
+    }
+
+}

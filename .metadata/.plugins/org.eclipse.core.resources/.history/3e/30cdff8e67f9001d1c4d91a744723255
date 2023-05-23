@@ -1,0 +1,22 @@
+package _programmers;
+
+import java.util.ArrayList;
+import java.util.Queue;
+
+public class 캐시 {
+
+	public static void main(String[] args) {
+
+	}
+	
+    public int solution(int cacheSize, String[] cities) {
+        int answer = 0;
+        
+        Queue<String> queue = new ArrayList<>();
+        
+        
+        
+        return answer;
+    }
+
+}
