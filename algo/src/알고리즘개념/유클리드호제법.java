@@ -11,8 +11,7 @@ public class 유클리드호제법 {
 	//재귀함수 이용
 	private static int gcd(int i, int j) {
 		
-		if (i%j == 0) {
-			System.out.println(i+" / "+j+" = "+i%j);
+		if (i%j == 0) { //나누어 떨어지면 나누어 떨어지는 수가 바로 최대공약수임
 			return j;
 		}else {
 			return gcd(j, i%j);
