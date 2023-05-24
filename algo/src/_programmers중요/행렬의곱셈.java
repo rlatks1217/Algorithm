@@ -1,4 +1,4 @@
-package _programmers;
+package _programmers중요;
 
 public class 행렬의곱셈 {
 	public static void main(String[] args) {
@@ -12,14 +12,13 @@ public class 행렬의곱셈 {
 
 	    for (int i = 0; i < arr1.length; i++) { //arr1의 행만큼(i가 행을 의미함)
 	        for (int j = 0; j < arr2[0].length; j++) { //arr2의 열만큼(j가 열을 의미함)
-	            for (int k = 0; k < arr1[0].length; k++) {//arr1의 열 길이만큼
+	        	//즉, 여기까지는 1행의 첫번째 열부터 두번째 열, 세번째 열 .. 순으로 한 행씩 채워갈 것이라는 의미에서 해당 로직을 작성한 것!
+	        	
+	            for (int k = 0; k < arr1[0].length; k++) {//arr1의 열 길이만큼 => 결과물의 행의 길이가 되는 게 arr1임
 	                
 	            	result[i][j] += arr1[i][k] * arr2[k][j];
-	                //이 줄이 제일 중요함
-	                //arr1[i][k] : arr1의 i행의 k번째 열
-	                //arr2[k][j] : arr2의 k행의 j번째 열(여기서 k만 변하므로 행만 변하고 같은 열에 대하여 곱이 진행되고 있음)
+	            //arr1의 같은 행에 있는 모든 값들과 arr2의 같은 열에 있는 모든 값들을 각각 곱하고 모두 더했을 때 => 전체 결과표(행렬)에서 한 칸을 채우는 값이 됨 
 	            	
-	            	//result배열 입장에서는 열 하나씩 채워지고 있는 것임(세로의 한 줄마다 arr1의 행 갯수만큼 연산(곱셈) 후 더해지는 방식) 
 	            }
 	        }
 	    }
