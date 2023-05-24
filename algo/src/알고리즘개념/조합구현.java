@@ -8,10 +8,12 @@ public class 조합구현 {
     public static void main(String[] args) {
         int[] numberList = {1, 2, 3, 4, 5};
         int r = 1;
+        
+        for (int i = 1; i <= numberList.length; i++) {
+        	combination("", 0, i, numberList); //5C1부터 5C5까지 다 구한다고 했을 땐 반복문 돌리면 됨			
+		}
 
-        combination("", 0, r, numberList); //5C1부터 5C5까지 다 구한다고 했을 땐 반복문 돌리면 됨
-
-        System.out.println(list);
+        System.out.println(list.size());
     }
 
     private static void combination(String case_, int start, int endCount, int[] numberList) {
@@ -30,3 +32,4 @@ public class 조합구현 {
         }
     }
 }
+//조합은 시작인덱스(start)부터 start 자기 자신과 자기 뒤에서 누구를 고를지만 생각하면 됨
