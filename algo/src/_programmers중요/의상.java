@@ -1,7 +1,7 @@
 package _programmers중요;
 
 import java.util.HashSet;
-
+//오답 => 조합에서 시간초과
 public class 의상 {
 	public static int answer = 0;
 
@@ -33,8 +33,6 @@ public class 의상 {
 				combination(set, i+1, end-1, clothes);
 				set.remove(clothes[i][1]);
 			}
-			
-			
 		}
 		
 	}
