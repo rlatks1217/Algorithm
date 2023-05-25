@@ -26,7 +26,7 @@ public class pratice {
 			if (students[i] == 0) {
 				students[i] = 1;
 			}
-		}
+		} 
 		
 		
 		for (int i = 0; i < lost.length; i++) {
