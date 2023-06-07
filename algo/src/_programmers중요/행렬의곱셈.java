@@ -8,7 +8,7 @@ public class 행렬의곱셈 {
 	}
 
 	public static int[][] solution(int[][] arr1, int[][] arr2) {
-	    int[][] result = new int[arr1.length][arr2[0].length]; //arr1의 행큼 행이 있을 것이고 arr2의 열만큼 열이 있을 것이므로 길이 이렇게 생성 
+	    int[][] result = new int[arr1.length][arr2[0].length]; //arr1의 행만큼 행이 있을 것이고 arr2의 열만큼 열이 있을 것이므로 길이 이렇게 생성 
 
 	    for (int i = 0; i < arr1.length; i++) { //arr1의 행만큼(i가 행을 의미함)
 	        for (int j = 0; j < arr2[0].length; j++) { //arr2의 열만큼(j가 열을 의미함)
