@@ -1,9 +1,0 @@
-package _programers;
-
-public class 영어끝말잇기 {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
