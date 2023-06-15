@@ -1,0 +1,20 @@
+package 약수_배수와소수;
+
+import java.util.Scanner;
+
+public class Ex1978 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			int number = sc.nextInt();
+			for (int j = 0; j <= Math.sqrt(number); j++) {
+				
+			}
+		}
+	}
+
+}

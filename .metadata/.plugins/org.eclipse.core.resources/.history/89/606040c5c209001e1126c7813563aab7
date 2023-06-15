@@ -1,0 +1,74 @@
+package array_;
+
+import java.util.Scanner;
+
+public class Ex10810 {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] A = sc.next().split("");
+		String[] B = sc.next().split("");
+		
+		int muchlength = 0;
+		int gap = 0;
+		String[] muchArr = null;
+		
+		if (A.length >= B.length) {
+			muchlength = A.length;
+			muchArr = A;
+			gap = A.length - B.length;
+		}else {
+			muchlength = B.length;			
+			muchArr = B;
+			gap = B.length - A.length;
+		}
+		
+		int[] result = new int[muchlength];
+		
+		int a = Integer.parseInt(A[0]);
+		int b = Integer.parseInt(B[0]);
+		
+		int start = 0;
+		if (A.length == B.length) {
+			if (a+b > 9) {
+				result[0] = a+b/10;
+				result[1] = a+b%10;
+				start = 2;
+			} else {
+				result[0] = a+b;			
+				start = 1;			
+			}			
+		}else {
+			for (int i = 0; i < gap; i++) {
+				result[i] = Integer.parseInt(muchArr[i]);
+			}
+			start = gap;
+			
+		}
+		
+		for (int i = start; i < A.length; i++) {
+			int num1 = Integer.parseInt(A[i]);
+			int num2 = Integer.parseInt(B[i]);
+			
+			int plus = num1 + num2;
+			
+			if (plus > 9) {
+				result[i-1] += plus/10;
+				result[i] = plus%10;
+			}else {
+				result[i] = plus;				
+			}
+		}
+		
+		String number = "";
+		for (int i = 0; i < result.length; i++) {
+			number += result[i];
+		}
+		
+		System.out.println(number);
+		
+		sc.close();
+	}
+
+}

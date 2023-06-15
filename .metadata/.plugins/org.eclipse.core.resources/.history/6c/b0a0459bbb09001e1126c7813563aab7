@@ -1,0 +1,30 @@
+package array_;
+
+import java.util.Scanner;
+
+public class Ex10810 {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] a = sc.next().split("");
+		String[] b = sc.next().split("");
+		
+		String result = "";
+		int nextNumber = 0;
+		for (int i = b.length-1; i >= 0; i--) {
+			int A = Integer.parseInt(a[i]);
+			int B = Integer.parseInt(b[i]);
+			if (A + B > 9) {
+				nextNumber = (A+B)/10;
+			}else {
+				nextNumber = 0;
+			}
+			
+			result += (A + B)%10 + nextNumber;
+		}
+		
+		System.out.println(7%10);
+	}
+
+}

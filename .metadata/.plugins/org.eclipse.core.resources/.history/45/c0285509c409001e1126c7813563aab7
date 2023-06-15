@@ -1,0 +1,16 @@
+package array_;
+
+import java.util.Scanner;
+
+public class Ex10810 {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] A = sc.next().split("");
+		String[] B = sc.next().split("");
+		
+		
+	}
+
+}
