@@ -1,0 +1,43 @@
+package array_;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Ex10811 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+
+		int[] arr = new int[N];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = i + 1;
+		}
+
+		for (int i = 0; i < M; i++) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			
+			int start = a;
+			int end = b;
+			for (int j = 0; j < (b-a+1)/2; j++) {
+				if ((b-a+1)/2 == 2) {
+					System.out.println("실행");
+				}
+				int change = arr[start-1];
+				arr[start-1] = arr[end-1];
+				arr[end-1] = change;
+				start++;
+				end--;
+			}
+			System.out.println(Arrays.toString(arr));
+		}
+		
+
+	}
+
+}

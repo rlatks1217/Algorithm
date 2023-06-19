@@ -1,0 +1,79 @@
+package array_;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Ex2563 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int total = 0;  //검은 영역의 넓이
+        int n = Integer.parseInt(br.readLine());  //색종이 개수
+        boolean[][] arr = new boolean[101][101];  //도화지
+        for (int i = 0; i < n; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
+            //(x,y)부터 (x+9, y+9)까지의 영역을 하나씩 체크한 후 총 넓이에 더해준다
+            for (int j = x; j < x+10; j++) {
+                for (int k = y; k < y+10; k++) {
+                    if (!arr[j][k]) {
+                        arr[j][k] = true;
+                        total++;
+                    }
+                }
+            }
+        }
+        System.out.print(total);
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int T = sc.nextInt();
+//		
+//		int arr[][] = new int[T][2];
+//		
+//		int gap = 0;
+//		for (int i = 0; i < T; i++) {
+//			int x = sc.nextInt(); //x
+//			int y = sc.nextInt(); //y
+//			
+//			arr[i][0] = x; 
+//			arr[i][1] = y;
+//			
+//			if (i > 0) {
+//				int x1 = x;
+//				int x2 = x + 10;
+//				int y1 = y;
+//				int y2 = y + 10;
+//				for (int j = 0; j < i; j++) {
+//					int a = arr[j][0]; //x
+//					int b = arr[j][1]; //y
+//					
+//					if (x1 <= a + 10 && x1 > a) {
+//						if (y1 > b && y1 <= b + 10) {
+//							gap += ((a + 10) - x1)*((b + 10) - y1);
+//						} else if (y2 > b && y2 <= b + 10) { 
+//							gap += ((a + 10) - x1)*(y2 - b);
+//						}
+//					} else if (x2 <= a + 10 && x2 > a) {
+//						if (y1 > b && y1 <= b + 10) {
+//							gap += (x2 - a)*((b + 10) - y1);
+//						} else if (y2 > b && y2 <= b + 10) { 
+//							gap += (x2 - a)*(y2 - b);
+//						}
+//					}
+//					
+//				}
+//			}
+//		}
+//		
+//		System.out.println((arr.length*100)-gap);
+//		
+//		sc.close();
+	}
+
+}
+
+//세 번 이상 겹쳐질 경우 문제가 됨
+//
