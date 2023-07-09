@@ -1,6 +1,5 @@
 package array_;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex2563 {
