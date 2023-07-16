@@ -1,0 +1,35 @@
+package 직사각형과삼각형;
+
+import java.util.Scanner;
+
+public class Ex9063 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+		
+		int xMax = -10000;
+		int xMin = 10000;
+		int yMax = -10000;
+		int yMin = 10000;
+		
+		for (int i = 0; i < N; i++) {
+			int x = sc.nextInt();
+			int y = sc.nextInt();
+			
+			xMax = Math.max(xMax, x);
+			yMax = Math.max(yMax, y);
+			xMin = Math.min(xMin, x);
+			yMin = Math.min(yMin, y);
+		}
+		
+		int width = xMax - xMin;
+		int height = yMax - yMin;
+		
+		System.out.println(width * height);
+		
+		sc.close();
+	}
+
+}
