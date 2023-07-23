@@ -1,0 +1,54 @@
+package _JongAll;
+
+import java.util.Scanner;
+
+public class 구구단2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int s = sc.nextInt();
+		int e = sc.nextInt();
+
+		int gap = (s - e) > 0 ? s - e : (-1) * (s - e);
+
+		int[] arr;
+
+		if (gap > 1) {
+			arr = new int[gap + 2];
+
+			if (s - e > 0) {
+				arr[0] = s;
+				for (int i = 1; i <= gap; i++) {
+					arr[i] = s + i;
+				}
+				arr[e-1] = e;
+			} else {
+				arr[0] = s;
+				for (int i = 1; i <= gap; i++) {
+					arr[i] = s - i;
+				}
+				arr[e-1] = e;
+			}
+		} else {
+			arr = new int[gap+2];
+			arr[0] = s;
+			arr[1] = e;
+			
+		}
+		int cnt = 0;
+		
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (arr[cnt]*(cnt+1) < 9) {
+					System.out.print(arr[cnt] + " * " + (cnt+1) + " = " + arr[cnt]*(cnt+1) + "   ");
+				} else {
+					System.out.print(arr[cnt] + " * " + (cnt+1) + " =  " + arr[cnt]*(cnt+1) + "   ");
+				}
+			}
+		}
+		
+		sc.close();
+	}
+
+}

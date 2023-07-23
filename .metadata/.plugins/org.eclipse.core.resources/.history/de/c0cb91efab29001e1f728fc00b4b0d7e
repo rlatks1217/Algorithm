@@ -1,0 +1,18 @@
+package _JongAll;
+
+import java.util.Scanner;
+
+public class 구구단2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int s = sc.nextInt();
+		int e = sc.nextInt();
+
+		int gap = (s - e) > 0 ? s - e : (-1) * (s - e);
+		
+		
+	}
+
+}
