@@ -1,4 +1,4 @@
-package 알고리즘개념;
+package 시간복잡도;
 
 import java.util.Scanner;
 
