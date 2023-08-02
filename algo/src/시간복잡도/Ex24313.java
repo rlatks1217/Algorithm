@@ -15,15 +15,14 @@ public class Ex24313 {
 		
 		sc.close();
 		//g(n) = n임 -> 문제에서 O(g(n))을 O(n)라고 바꿔썼기 때문에 같다고 볼 수 있음 
-		if (a1*n0 + a0 <= c*n0) {
-			System.out.println(1);
-		} else {
-			System.out.println(0);			
-		}
+			if (a1*n0 + a0 <= c*n0 && c >= a1) {
+				System.out.println(1);
+			} else {
+				System.out.println(0);			
+			}
 		
 	}
 
 }
-//존재하기만 하면 됨 -> 하나라도 있으면 됨 
-// -> 최소값인 n0을 넣었을 때 만족하지 않으면 모든 수가 만족하지 않음을 이용해서 풀면 됨
-
+//'모든' 이란 말이 있으므로 전부 만족해야 함
+//a0가 음수인 경우도 생각해줘야 하므로 c >= a1라는 조건이 들어가야 함
