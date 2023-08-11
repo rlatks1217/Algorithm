@@ -55,3 +55,8 @@ public class Ex2231 {
 	}
 
 }
+//각 자리수 구해서 더하는 것은 이렇게 써도 될 듯
+//while(number != 0) {
+//	sum += number % 10;	// 각 자릿수 더하기
+//	number /= 10;
+//}
