@@ -2,7 +2,7 @@ package _JongAll;
 
 import java.util.Scanner;
 
-public class Ex1304 {
+public class 숫자사각형3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		

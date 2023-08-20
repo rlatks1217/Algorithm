@@ -2,7 +2,7 @@ package _JongAll;
 
 import java.util.Scanner;
 
-public class Ex1856 {
+public class 숫자사각형2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
