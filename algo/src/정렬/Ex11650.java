@@ -22,7 +22,7 @@ public class Ex11650 {
 			System.out.println(list.get(i).getX() + " " + list.get(i).getY());
 		}
 		
-		sc.close();
+		sc.close();   
 	}
 
 }
