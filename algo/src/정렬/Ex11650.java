@@ -16,12 +16,14 @@ public class Ex11650 {
 			list.add(new XandY(sc.nextInt(),sc.nextInt()));
 		}
 		
-		Collections.sort(list, Comparator.comparing(XandY::getX).thenComparing(XandY::getY));
+		Collections.sort(list, Comparator.comparing(XandY::getX).thenComparing(XandY::getY).thenComparing(XandY :: getY));
 		
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getX() + " " + list.get(i).getY());
 		}
 		
+//Collections.sort(list, Comparator.comparing(XandY::getX).thenComparing(XandY::getY).thenComparing(XandY :: getY));
+//이렇게 연쇄적으로 여러 개의 기준으로 정렬할 수도 있음
 		sc.close();   
 	}
 
