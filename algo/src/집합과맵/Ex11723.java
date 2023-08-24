@@ -1,4 +1,4 @@
-package 집합;
+package 집합과맵;
 
 import java.io.BufferedReader;
 import java.io.IOException;
