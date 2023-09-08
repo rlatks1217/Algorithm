@@ -29,6 +29,8 @@ public class Ex17103 {
 
 			System.out.print(ans);
 		}
+		
+		sc.close();
 	}
 
 }
