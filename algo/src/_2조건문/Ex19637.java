@@ -1,4 +1,4 @@
-package if_switch;
+package _2조건문;
 
 import java.io.BufferedReader;
 import java.io.IOException;

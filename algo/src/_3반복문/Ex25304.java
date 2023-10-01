@@ -1,4 +1,4 @@
-package for_;
+package _3반복문;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;

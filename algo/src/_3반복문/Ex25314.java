@@ -1,4 +1,4 @@
-package for_;
+package _3반복문;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

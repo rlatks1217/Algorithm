@@ -1,4 +1,4 @@
-package 스택2;
+package 스택_큐2;
 
 import java.util.Scanner;
 import java.util.Stack;
