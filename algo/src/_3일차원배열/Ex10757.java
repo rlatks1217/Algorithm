@@ -1,4 +1,4 @@
-package _3배열;
+package _3일차원배열;
 
 import java.math.BigDecimal;
 import java.util.Scanner;

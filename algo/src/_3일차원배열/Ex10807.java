@@ -1,4 +1,4 @@
-package _3배열;
+package _3일차원배열;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;

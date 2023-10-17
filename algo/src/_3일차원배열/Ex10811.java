@@ -1,4 +1,4 @@
-package _3배열;
+package _3일차원배열;
 
 import java.util.Scanner;
 
@@ -39,9 +39,38 @@ public class Ex10811 {
 		}
 		
 		sc.close();
+		
+		//복습
+//    	Scanner sc = new Scanner(System.in);
+//    	
+//    	int n = sc.nextInt();
+//    	int m = sc.nextInt();
+//    	
+//    	int[] arr = new int[n+1];
+//    	for (int i = 1; i <= n; i++) {
+//    		arr[i] = i;
+//		}
+//    	
+//    	for (int i = 0; i < m; i++) {
+//			int a = sc.nextInt();
+//			int b = sc.nextInt();
+//			
+//			int count = b - a + 1;
+//			
+//			for (int j = 0; j < count/2; j++, a++, b--) {
+//				int keep = arr[a];
+//				arr[a] = arr[b];
+//				arr[b] = keep;
+//			}
+//		}
+//    	
+//    	for (int i = 1; i < arr.length; i++) {
+//			System.out.print(arr[i] + " ");
+//		}
+//    	sc.close();
 	}
 
 }
 
 //(b-a+1)/2를 하는 이유 : 가장 첫번째와 끝번째 수부터 짝지어서 자리를 바꾸는 식으로 뒤집음
-//그러므로 짝이 몇 번 지어지는지만 세어주면 되는 것 /+1을 한 이유는 첫자리 자신도 포함시키기 위함임
+//그러므로 짝이 몇 번 지어지는지만 세어주면 되는 것 / +1을 한 이유는 첫자리 자신도 포함시키기 위함임
