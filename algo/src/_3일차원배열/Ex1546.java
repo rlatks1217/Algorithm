@@ -28,7 +28,8 @@ public class Ex1546 {
 		double[] naljo = new double[N];
 		for (int i = 0; i < subjects.length; i++) {
 			naljo[i] = (double)subjects[i]/max*100; 
-			//int끼리 계산했으므로 계산 결과도 int타입일 것임-->하지만 계산 결과가 소수가 나오기 때문에 double로 바꾸지 않으면 0이하 수는 나오지 않을 것
+			//int끼리 계산했으니까 결과도 int
+			//그래서 double로 형변환해줌
 		}
 		
 		double sum = 0;
