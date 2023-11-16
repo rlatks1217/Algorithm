@@ -2,6 +2,8 @@ package _1조건문;
 
 import java.util.Scanner;
 
+
+
 public class Ex14681 {
 
 	public static void main(String[] args) {
