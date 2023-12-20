@@ -1,4 +1,4 @@
-package 스택_큐2;
+package 스택_큐_덱;
 
 import java.util.Scanner;
 import java.util.Stack;
