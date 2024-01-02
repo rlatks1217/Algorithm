@@ -1,4 +1,4 @@
-package function;
+package _4함수;
 
 import java.util.Scanner;
 
