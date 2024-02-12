@@ -1,0 +1,29 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Test {
+	
+	public static void main(String[] args) {
+			InputStream input;
+			try {
+				input = new FileInputStream("C:/ddd.txt");
+				int byteCount = 0;
+				while(true) {
+					int a = input.read();
+					System.out.println(a);
+					if (a == -1) {
+						break;
+					}
+					byteCount++;
+				}
+				System.out.println(byteCount);
+			} catch (IOException e) {
+			// FileNotFoundException도 IOException을 상속하고 있기 때문에 try/catch 한 번만 작성해도 됨
+				e.printStackTrace();
+			}
+
+		
+	}
+	
+}

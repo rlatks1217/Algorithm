@@ -1,0 +1,38 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+public class Test {
+	
+	public static void main(String[] args) {
+			
+		String originalFileName = "C:/aaa.txt";
+		String targetFileName = "C:/Users/82106/Desktop/bbb.txt";
+		
+		InputStream input;
+		OutputStream output;
+		try {
+			input = new FileInputStream(originalFileName);
+			output =  new FileOutputStream(targetFileName);
+			
+			byte[] data = new byte[9];
+			
+			while (true) {
+				int num = input.read(data);
+				if (num == -1) {
+					break;
+				}
+				output.write(data, 0, num);
+				// (바이트 배열, 시작 인덱스, 끝 인덱스 + 1)
+				// 버퍼에다 배열에 저장된 개수만큼만 담도록 작성
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+}
