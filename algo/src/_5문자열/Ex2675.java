@@ -1,4 +1,4 @@
-package string;
+package _5문자열;
 
 import java.util.Scanner;
 

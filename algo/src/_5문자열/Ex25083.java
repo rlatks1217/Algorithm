@@ -1,4 +1,4 @@
-package string;
+package _5문자열;
 
 public class Ex25083 {
 
