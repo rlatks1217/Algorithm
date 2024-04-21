@@ -1,4 +1,4 @@
-package Onboarding;
+package _Onboarding;
 
 import java.io.BufferedReader;
 import java.io.IOException;
